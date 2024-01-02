@@ -8,7 +8,7 @@ export default function Characters({ characters }: { characters: Character[] }) 
     <>
       <DashboardLayout>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {characters.map((character: Character) => <CharacterCard character={character} />)}
+          {characters.map((character: Character) => <CharacterCard key={character.index} character={character} />)}
         </div>
       </DashboardLayout>
     </>
