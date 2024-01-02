@@ -21,6 +21,11 @@ const config: Config = {
         '900': '#5e2e18',
         '950': '#3d1a0b',
       },
+      'gray': {
+        '50': '#f9fafb'
+      },
+      'white': '#ffffff',
+      'black': '#000000',
     },
     extend: {
       backgroundImage: {

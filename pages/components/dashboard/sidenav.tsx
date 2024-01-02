@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import NavLinks from "./nav-links";
 
 export default function SideNav() {
   return (
@@ -14,14 +15,13 @@ export default function SideNav() {
             alt="Logo de Hogwarts"
             width={200}
             height={200}
-            layout="responsive"
+            priority={true}
           />
           <p className="invisible sm:visible text-base text-[#fff] font-semibold">Mundo Hogwarts</p>
         </div>
       </Link>
-      <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-        {/* <NavLinks /> */}
-        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
+      <div className="grid grid-cols-4 gap-1 sm:grid-cols-1">
+        <NavLinks />
       </div>
     </div>
   );
