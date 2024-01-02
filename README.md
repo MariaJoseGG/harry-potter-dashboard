@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+***
+
+This project presents a dashboard with data about the books, characters and spells of the Harry Potter world, using the [PotterAPI](https://github.com/fedeperin/potterapi).
+
+***
+
 ## Getting Started
 
 First, run the development server:
