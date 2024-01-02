@@ -26,6 +26,22 @@ const config: Config = {
       },
       'white': '#ffffff',
       'black': '#000000',
+      'gryffindor': {
+        '200': '#ffc1c2',
+        '950': '#740001'
+      },
+      'hufflepuff': {
+        '100': '#fdffc1',
+        '500': '#FFD800'
+      },
+      'ravenclaw': {
+        '100': '#daefff',
+        '950': '#0E1A40'
+      },
+      'slytherin': {
+        '200': '#c2f0d0',
+        '900': '#1A472A'
+      },
     },
     extend: {
       backgroundImage: {

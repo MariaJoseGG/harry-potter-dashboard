@@ -57,6 +57,7 @@ export default function HousesChart() {
           labels,
           datasets: [
             {
+              label: 'Houses',
               data,
               backgroundColor: [
                 '#AE0001',
