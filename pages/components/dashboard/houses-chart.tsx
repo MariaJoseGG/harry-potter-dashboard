@@ -59,10 +59,10 @@ export default function HousesChart() {
             label: 'Personajes por casa',
             data,
             backgroundColor: [
-              '#ffc1c2',
-              '#fdffc1',
-              '#daefff',
-              '#c2f0d0'
+              '#f24144',
+              '#feea11',
+              '#32b8fe',
+              '#35b25d'
             ]
           }]
         }}
