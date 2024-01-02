@@ -4,8 +4,9 @@ import { GiSpellBook } from 'react-icons/gi'
 import { IoPersonCircle } from 'react-icons/io5'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { NavLink } from '@/pages/lib/definitions'
 
-const links = [
+const links: NavLink[] = [
   {
     name: 'Inicio',
     href: '/',
@@ -29,15 +30,15 @@ const links = [
 ]
 
 export default function NavLinks() {
-  const pathname = usePathname()
+  const pathname: string = usePathname()
 
   return (
     <>
-      {links.map((link) => (
+      {links.map((link: NavLink) => (
         <Link
           key={link.name}
           href={link.href}
-          className={`flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-jambalaya-50 hover:text-jambalaya-900 md:flex-none md:justify-start md:p-2 md:px-3 ${pathname === link.href ? 'bg-jambalaya-100' : ''}`}
+          className={`flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-jambalaya-50 hover:text-jambalaya-700 md:flex-none md:justify-start md:p-2 md:px-3 ${pathname === link.href ? 'bg-jambalaya-100 text-jambalaya-900' : ''}`}
         >
           <link.icon className="w-6" />
           <p className="hidden sm:block">{link.name}</p>

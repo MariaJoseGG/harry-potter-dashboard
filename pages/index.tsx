@@ -27,8 +27,8 @@ export default function Home({ numberOfBooks, numberOfSpells }: { numberOfBooks:
 
 export async function getStaticProps() {
   // The functions defined in /services/api are used to obtain these values
-  const numberOfBooks = await getBooksCount()
-  const numberOfSpells = await getSpellsCount()
+  const numberOfBooks: number = await getBooksCount()
+  const numberOfSpells: number = await getSpellsCount()
 
   return {
     props: {

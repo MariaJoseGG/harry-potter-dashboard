@@ -10,8 +10,9 @@ import {
 } from "chart.js"
 ChartJS.register(BarController, BarElement, CategoryScale, LinearScale)
 import { Bar } from "react-chartjs-2"
+import { Character } from "@/pages/lib/definitions"
 
-const labels = [
+const labels: string[] = [
   'Gryffindor',
   'Hufflepuff',
   'Ravenclaw',
@@ -22,9 +23,9 @@ export default function HousesChart() {
   const [data, setData] = useState<number[]>([])
 
   useEffect(() => {
-    const getCharactersByHouse = async () => {
-      const charactersByHouse = [0, 0, 0, 0]
-      const characters = await getCharacters()
+    const getCharactersByHouse = async (): Promise<void> => {
+      const charactersByHouse: number[] = [0, 0, 0, 0]
+      const characters: Character[] = await getCharacters()
 
       characters.forEach((character: { house: any }) => {
         switch (character.house) {
