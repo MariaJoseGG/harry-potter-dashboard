@@ -16,9 +16,11 @@ export default function Home({ numberOfBooks, numberOfSpells }: { numberOfBooks:
           <Card title="Hechizos" value={numberOfSpells} />
         </div>
         {/* Chart showing the number of characters in each house at Hogwarts */}
-        <div className='mt-9'>
-          <h2 className='text-center text-2xl font-semibold'>Personajes por casa</h2>
-          <HousesChart />
+        <div className='flex justify-center'>
+          <div className='mt-9 w-96'>
+            <h2 className='text-center text-2xl font-semibold'>Personajes por casa de Hogwarts</h2>
+            <HousesChart />
+          </div>
         </div>
       </DashboardLayout>
     </main>

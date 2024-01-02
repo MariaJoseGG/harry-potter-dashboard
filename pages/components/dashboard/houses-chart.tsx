@@ -3,13 +3,13 @@ import { useEffect, useState } from "react"
 
 import {
   Chart as ChartJS,
-  BarController,
-  BarElement,
-  CategoryScale,
-  LinearScale
+  PieController,
+  ArcElement,
+  Legend,
+  Tooltip,
 } from "chart.js"
-ChartJS.register(BarController, BarElement, CategoryScale, LinearScale)
-import { Bar } from "react-chartjs-2"
+ChartJS.register(PieController, ArcElement, Legend, Tooltip)
+import { Pie } from "react-chartjs-2"
 import { Character } from "@/pages/lib/definitions"
 
 const labels: string[] = [
@@ -52,21 +52,19 @@ export default function HousesChart() {
 
   return (
     <>
-      <Bar
+      <Pie
         data={{
           labels,
-          datasets: [
-            {
-              label: 'Houses',
-              data,
-              backgroundColor: [
-                '#AE0001',
-                '#FFED86',
-                '#222F5B',
-                '#2A623D'
-              ]
-            },
-          ],
+          datasets: [{
+            label: 'Personajes por casa',
+            data,
+            backgroundColor: [
+              '#ffc1c2',
+              '#fdffc1',
+              '#daefff',
+              '#c2f0d0'
+            ]
+          }]
         }}
       />
     </>
