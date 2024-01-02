@@ -27,7 +27,7 @@ export default function HousesChart() {
       const charactersByHouse: number[] = [0, 0, 0, 0]
       const characters: Character[] = await getCharacters()
 
-      characters.forEach((character: { house: any }) => {
+      characters.forEach((character: { house: string }) => {
         switch (character.house) {
           case 'Gryffindor':
             charactersByHouse[0]++

@@ -13,7 +13,7 @@ export default function Books({ books }: { books: Book[] }) {
           {
             books.map((book: Book) => {
               return (
-                <Link href={`/books/${book.index}`} className="flex flex-col items-center mb-6">
+                <Link key={book.index} href={`/books/${book.index}`} className="flex flex-col items-center mb-6">
                   <Image
                     className="rounded-md"
                     src={book.cover}

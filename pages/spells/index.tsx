@@ -7,7 +7,7 @@ export default function Spells({ spells }: { spells: Spell[] }) {
   return (
     <>
       <DashboardLayout>
-        <div className="grid gap-5 min-[821px]:grid-cols-3">
+        <div className="grid gap-5 min-[980px]:grid-cols-3">
           {spells.map((spell: Spell) => <SpellCard key={spell.index} spell={spell} />)}
         </div>
       </DashboardLayout>
